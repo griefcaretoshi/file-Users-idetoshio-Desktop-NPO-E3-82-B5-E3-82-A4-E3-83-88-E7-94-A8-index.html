@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>遺族サポートネット With Heart｜特定非営利活動法人</title>
+  <meta name="description" content="特定非営利活動法人 遺族サポートネット With Heart。大切な人を亡くした方の哀しみに寄り添い、地域の遺族支援を支えます。">
+  <style>
+    :root {
+      --green: #9CCA48;
+      --pink: #f09199;
+      --text: #595858;
+      --light-green: #f0f8e4;
+      --light-pink: #fdeef0;
+      --white: #ffffff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', sans-serif;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ===== HEADER / NAV ===== */
+    header {
+      background: var(--white);
+      border-bottom: 3px solid var(--green);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
+    .logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+    .logo-sub {
+      font-size: 11px;
+      color: var(--text);
+      opacity: 0.7;
+    }
+    .logo-main {
+      font-size: 18px;
+      font-weight: bold;
+      color: var(--green);
+      letter-spacing: 0.02em;
+    }
+    .logo-en {
+      font-size: 13px;
+      color: var(--pink);
+      font-weight: bold;
+      letter-spacing: 0.1em;
+    }
+    nav {
+      display: flex;
+      gap: 24px;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--green); }
+    .nav-cta {
+      background: var(--pink);
+      color: var(--white) !important;
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-size: 13px !important;
+    }
+    .nav-cta:hover { background: #e07a83; opacity: 1; }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(135deg, var(--green) 0%, #6a9a38 50%, #5a8a2e 100%);
+      color: var(--white);
+      padding: 100px 24px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50px; right: -50px;
+      width: 300px; height: 300px;
+      background: rgba(240, 145, 153, 0.2);
+      border-radius: 50%;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -60px;
+      width: 400px; height: 400px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+    }
+    .hero-inner { max-width: 800px; margin: 0 auto; position: relative; z-index: 1; }
+    .hero-label {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.4);
+      color: var(--white);
+      font-size: 13px;
+      padding: 4px 16px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+      letter-spacing: 0.1em;
+    }
+    .hero h1 {
+      font-size: clamp(26px, 5vw, 44px);
+      font-weight: bold;
+      line-height: 1.4;
+      margin-bottom: 24px;
+      letter-spacing: 0.03em;
+    }
+    .hero h1 span { color: #fdeef0; }
+    .hero p {
+      font-size: 16px;
+      line-height: 1.9;
+      opacity: 0.93;
+      margin-bottom: 40px;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--white);
+      color: var(--green);
+      padding: 14px 32px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+      transition: all 0.2s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.2); }
+    .btn-secondary {
+      background: var(--pink);
+      color: var(--white);
+      padding: 14px 32px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+      transition: all 0.2s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .btn-secondary:hover { transform: translateY(-2px); background: #e07a83; }
+
+    /* ===== SECTION BASE ===== */
+    section { padding: 80px 24px; }
+    .section-inner { max-width: 1000px; margin: 0 auto; }
+    .section-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 0.15em;
+      color: var(--green);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    .section-tag-pink { color: var(--pink); }
+    h2 {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: bold;
+      line-height: 1.4;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+    h2 .underline-green {
+      border-bottom: 4px solid var(--green);
+      padding-bottom: 4px;
+    }
+    h2 .underline-pink {
+      border-bottom: 4px solid var(--pink);
+      padding-bottom: 4px;
+    }
+    .lead {
+      font-size: 17px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* ===== PROBLEM (問題提起) ===== */
+    .problem { background: var(--light-pink); }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .problem-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 32px;
+      border-left: 5px solid var(--pink);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .problem-card h3 {
+      font-size: 17px;
+      font-weight: bold;
+      color: var(--pink);
+      margin-bottom: 12px;
+    }
+    .problem-card p { font-size: 15px; line-height: 1.8; }
+
+    /* ===== MISSION ===== */
+    .mission { background: var(--white); }
+    .mission-box {
+      background: linear-gradient(135deg, var(--light-green), var(--white));
+      border: 2px solid var(--green);
+      border-radius: 20px;
+      padding: 48px;
+      margin-top: 40px;
+      text-align: center;
+    }
+    .mission-box blockquote {
+      font-size: clamp(18px, 3vw, 24px);
+      font-weight: bold;
+      color: var(--green);
+      line-height: 1.6;
+      margin-bottom: 24px;
+      quotes: none;
+    }
+    .mission-box p {
+      font-size: 16px;
+      line-height: 1.9;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .mission-keywords {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .keyword {
+      background: var(--green);
+      color: var(--white);
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .keyword-pink { background: var(--pink); }
+
+    /* ===== FEATURES (取り組み) ===== */
+    .features { background: var(--light-green); }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .feature-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 32px 28px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border-top: 4px solid var(--green);
+      transition: transform 0.2s;
+    }
+    .feature-card:hover { transform: translateY(-4px); }
+    .feature-icon {
+      width: 52px; height: 52px;
+      background: var(--light-green);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    .feature-card h3 {
+      font-size: 17px;
+      font-weight: bold;
+      margin-bottom: 12px;
+      color: var(--green);
+    }
+    .feature-card p { font-size: 14px; line-height: 1.8; }
+
+    /* ===== SOCIAL ISSUE ===== */
+    .social-issue { background: #f7f7f5; }
+    .issue-highlight {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 40px;
+      margin-top: 40px;
+      border-left: 6px solid var(--green);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .issue-highlight p {
+      font-size: 16px;
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
+    .issue-highlight p:last-child { margin-bottom: 0; }
+    .limitation-box {
+      background: var(--light-pink);
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-top: 32px;
+    }
+    .limitation-box h3 {
+      font-size: 17px;
+      font-weight: bold;
+      color: var(--pink);
+      margin-bottom: 16px;
+    }
+    .limitation-list {
+      list-style: none;
+      padding: 0;
+    }
+    .limitation-list li {
+      padding: 8px 0 8px 28px;
+      position: relative;
+      font-size: 15px;
+      border-bottom: 1px solid rgba(240,145,153,0.3);
+    }
+    .limitation-list li:last-child { border-bottom: none; }
+    .limitation-list li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--pink);
+      font-weight: bold;
+    }
+
+    /* ===== ABOUT (設立趣旨) ===== */
+    .about { background: var(--white); }
+    .timeline {
+      margin-top: 48px;
+      position: relative;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 120px;
+      top: 0; bottom: 0;
+      width: 2px;
+      background: var(--green);
+      opacity: 0.3;
+    }
+    .timeline-item {
+      display: flex;
+      gap: 32px;
+      margin-bottom: 28px;
+      align-items: flex-start;
+    }
+    .timeline-date {
+      min-width: 120px;
+      text-align: right;
+      font-size: 13px;
+      font-weight: bold;
+      color: var(--green);
+      padding-top: 4px;
+    }
+    .timeline-dot {
+      width: 16px; height: 16px;
+      background: var(--green);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 5px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 0 0 4px var(--light-green);
+    }
+    .timeline-content {
+      background: var(--light-green);
+      border-radius: 12px;
+      padding: 16px 20px;
+      font-size: 14px;
+      line-height: 1.7;
+      flex: 1;
+    }
+
+    /* ===== MEMBERS ===== */
+    .members { background: var(--light-green); }
+    .members-intro {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 32px;
+      margin-top: 32px;
+      margin-bottom: 40px;
+      border-left: 5px solid var(--green);
+    }
+    .members-intro p { font-size: 15px; line-height: 1.9; }
+    .members-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .member-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+    .member-card.featured {
+      border: 2px solid var(--green);
+    }
+    .member-role {
+      display: inline-block;
+      background: var(--green);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: bold;
+      padding: 3px 12px;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      letter-spacing: 0.05em;
+    }
+    .member-role.vice { background: var(--pink); }
+    .member-role.director { background: #8b8b8b; }
+    .member-role.auditor { background: #a0a0a0; }
+    .member-card h3 {
+      font-size: 19px;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+    .member-card .credentials {
+      font-size: 13px;
+      color: #777;
+      line-height: 1.7;
+    }
+
+    /* ===== SUPPORT TYPES ===== */
+    .support-types { background: var(--white); }
+    .types-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .type-card {
+      border-radius: 20px;
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
+    }
+    .type-card:hover { transform: translateY(-4px); }
+    .type-card.green { background: var(--light-green); border: 2px solid var(--green); }
+    .type-card.pink { background: var(--light-pink); border: 2px solid var(--pink); }
+    .type-card.green2 { background: #f0f8e4; border: 2px solid #9CCA48; }
+    .type-card.gray { background: #f5f5f5; border: 2px solid #ccc; }
+    .type-number {
+      font-size: 36px;
+      font-weight: bold;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .type-number.c-green { color: var(--green); }
+    .type-number.c-pink { color: var(--pink); }
+    .type-card h3 {
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+    .type-fee {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .type-fee span { font-size: 13px; font-weight: normal; }
+    .type-desc { font-size: 13px; line-height: 1.7; color: #666; }
+    .type-badge {
+      display: inline-block;
+      font-size: 12px;
+      padding: 3px 10px;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+    .badge-green { background: var(--green); color: white; }
+    .badge-pink { background: var(--pink); color: white; }
+    .badge-gold { background: #c4a217; color: white; }
+
+    /* ===== DONATION ===== */
+    .donation {
+      background: linear-gradient(135deg, #f09199 0%, #e07a83 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 100px 24px;
+    }
+    .donation h2 { color: var(--white); margin-bottom: 20px; }
+    .donation p { font-size: 16px; line-height: 1.9; opacity: 0.95; margin-bottom: 40px; }
+    .donation-uses {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin: 32px 0 48px;
+    }
+    .use-tag {
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.4);
+      color: white;
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+    .donation .btn-primary {
+      font-size: 17px;
+      padding: 18px 48px;
+    }
+
+    /* ===== ESTABLISHMENT ===== */
+    .establishment { background: #f7f7f5; }
+    .est-content {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 48px;
+      margin-top: 40px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    }
+    .est-content p {
+      font-size: 15px;
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
+    .est-content p:last-child { margin-bottom: 0; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--text);
+      color: rgba(255,255,255,0.8);
+      padding: 60px 24px 40px;
+    }
+    .footer-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+    .footer-logo .logo-main { color: var(--green); font-size: 20px; }
+    .footer-logo .logo-en { color: var(--pink); }
+    .footer-logo p {
+      font-size: 13px;
+      line-height: 1.8;
+      margin-top: 16px;
+      opacity: 0.8;
+    }
+    .footer-nav h4 {
+      font-size: 14px;
+      font-weight: bold;
+      color: var(--white);
+      margin-bottom: 16px;
+      letter-spacing: 0.1em;
+    }
+    .footer-nav ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .footer-nav ul li a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+    .footer-nav ul li a:hover { color: var(--green); }
+    .footer-bottom {
+      margin-top: 32px;
+      text-align: center;
+      font-size: 12px;
+      opacity: 0.6;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      nav { display: none; }
+      .problem-grid { grid-template-columns: 1fr; }
+      .timeline::before { left: 16px; }
+      .timeline-date { min-width: auto; font-size: 11px; text-align: left; }
+      .timeline-item { gap: 12px; }
+      .footer-top { grid-template-columns: 1fr; gap: 32px; }
+      .mission-box { padding: 32px 24px; }
+      .est-content { padding: 32px 24px; }
+      .hero { padding: 70px 20px 60px; }
+      section { padding: 60px 20px; }
+    }
+
+    /* ===== UTILITIES ===== */
+    .text-center { text-align: center; }
+    .mt-8 { margin-top: 8px; }
+    .mt-16 { margin-top: 16px; }
+    .mt-32 { margin-top: 32px; }
+    .divider {
+      width: 48px;
+      height: 4px;
+      border-radius: 2px;
+      margin: 16px 0 24px;
+    }
+    .divider-green { background: var(--green); }
+    .divider-pink { background: var(--pink); }
+    .divider-center { margin: 16px auto 24px; }
+  </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <span class="logo-sub">特定非営利活動法人</span>
+      <span class="logo-main">遺族サポートネット</span>
+      <span class="logo-en">With Heart</span>
+    </div>
+    <nav>
+      <a href="#about">私たちについて</a>
+      <a href="#activities">活動内容</a>
+      <a href="#members">理事・役員</a>
+      <a href="#support">支援・会員</a>
+      <a href="#contact" class="nav-cta">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="hero-label">特定非営利活動法人 遺族サポートネット With Heart</span>
+    <h1>答えのない哀しみに、<br><span>ひとりで向き合わなくていい</span>社会へ。</h1>
+    <p>
+      大切な人を亡くしたあとに残る問いには、簡単な答えがあるわけではありません。<br>
+      だからこそ私たちは、その痛みを、ともに抱え、ともに悩む「同行者」として関わり続けます。
+    </p>
+    <div class="hero-buttons">
+      <a href="#activities" class="btn-primary">わかちあいの会について</a>
+      <a href="#support" class="btn-secondary">活動を支援する</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 問題提起 ===== -->
+<section class="problem" id="issue">
+  <div class="section-inner">
+    <span class="section-tag section-tag-pink">現状と課題</span>
+    <div class="divider divider-pink"></div>
+    <h2>その哀しみは、<span class="underline-pink">解決できるもの</span>なのでしょうか。</h2>
+    <p class="lead">
+      2023年の統計によると、日本では年間約157万人が亡くなっています。仮に深く悼む方が3人いれば、毎日1万2,000人以上が死別の哀しみを抱えていることになります。<br>
+      しかし、この哀しみに向き合う支援の場は、まだ十分には整っていません。
+    </p>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <h3>支援の地域格差</h3>
+        <p>多くの自治体では自死遺族支援以外の体制が整っておらず、死別全般を支える場が存在しない地域が今なお多くあります。支援がないまま孤立が深まることが、大きな社会課題となっています。</p>
+      </div>
+      <div class="problem-card">
+        <h3>公的機関の限界</h3>
+        <p>自治体・医療・福祉・介護の分野では、遺族支援の必要性を認識していながらも、専門性や人員の問題から十分な支援体制を整えることが難しいのが実情です。</p>
+      </div>
+      <div class="problem-card">
+        <h3>支援者不足と質の問題</h3>
+        <p>遺族支援は非常に繊細で専門性が求められます。十分な知識がないまま関わることで、不用意な言葉が遺族をさらに傷つけてしまうケースも少なくありません。</p>
+      </div>
+      <div class="problem-card">
+        <h3>グリーフハラスメント</h3>
+        <p>善意からの言葉が遺族の負担になることがあります。家庭・職場・SNSなど身近な場で起きるグリーフハラスメントへの社会的認識を高めることも急務です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MISSION ===== -->
+<section class="mission" id="about">
+  <div class="section-inner">
+    <span class="section-tag">With Heartの考え方</span>
+    <div class="divider divider-green"></div>
+    <h2>大切なのは、「答え」ではなく<span class="underline-green">「ともに在ること」</span>。</h2>
+    <div class="mission-box">
+      <blockquote>
+        "思いやりをめぐらせ、<br>誠意をもって関わり続ける。"
+      </blockquote>
+      <p>
+        答えを示すことではなく、答えのない問いの前で立ち止まり、その痛みをともに抱え、悩み続けてくれる存在。それこそが、遺族支援において最も大切な関わりだと私たちは考えています。<br><br>
+        そして遺族支援は、現代社会に求められる「思いやり」でもあります。<br>
+        「With Heart」は、"思いやりをめぐらせる"という理念と、"誠意をもって関わる"姿勢を表す言葉です。私たちは、指導的立場や治療的立場ではなく、「同行者」として、哀しみの中にある方と共に在り続けます。
+      </p>
+      <div style="background: rgba(240,145,153,0.12); border-radius: 14px; padding: 28px 32px; margin-top: 28px; text-align: left; max-width: 680px; margin-left: auto; margin-right: auto;">
+        <p style="font-size:15px; line-height:1.9; margin:0;">
+          <strong style="color:var(--pink);">他の団体・地域の文化への敬意</strong><br>
+          グリーフとは身近な人、大切な存在を亡くしたときの様々な反応のことです。それら支援であるグリーフサポート／グリーフケアに取り組む団体や活動は全国にあり、それぞれの地域で積み重ねてきた文化や関係性があります。With Heartはそれらを尊重し、競合するのではなく補完し合う存在でありたいと考えています。<br>
+          私たちが最も力を注ぎたいのは、<strong>そうした取り組みがまだ届いていない地域</strong>—支援の場がなく、孤立したまま哀しみを抱え続けている方のいる場所—に、あたたかな居場所を届けることです。
+        </p>
+      </div>
+      <div class="mission-keywords">
+        <span class="keyword">同行者として寄り添う</span>
+        <span class="keyword">サポートグループ</span>
+        <span class="keyword keyword-pink">セルフヘルプ</span>
+        <span class="keyword keyword-pink">支援が届いていない地域へ</span>
+        <span class="keyword">地域文化を尊重</span>
+        <span class="keyword">遺族支援研修2年修了者</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SOCIAL ISSUE（自治体支援の役割） ===== -->
+<section class="social-issue">
+  <div class="section-inner">
+    <span class="section-tag">バックヤード支援の役割</span>
+    <div class="divider divider-green"></div>
+    <h2>自治体・医療・福祉の<span class="underline-green">「後ろ盾」として</span>。</h2>
+    <div class="issue-highlight">
+      <p>
+        With Heartは、遺族支援に取り組みたいと考えながらも体制が整っていない自治体や関係機関の<strong>「バックヤード（後方支援）」</strong>として機能することを重要な使命としています。前面に立つのではなく、自治体・医療・教育・福祉などの機関が安心して住民支援を行えるよう、その基盤を下支えします。
+      </p>
+      <p>
+        すでに地域に根ざした活動や団体がある場合は、そのつながりを大切にしながら連携します。私たちが特に力を入れたいのは、<strong>こうした取り組みが届いていない地域</strong>です。遺族が孤立し、相談できる場所も語り合える仲間もないまま日常を送っている方のいる地域に、まず居場所の灯を届けることを優先に考えています。
+      </p>
+      <p>
+        NPO法人化により、自治体委託事業の受託、支援不足地域へのオンライン支援、支援者育成の体系化、公的機関との相談体制整備などが可能となり、遺族支援の社会的基盤を安定的に構築することができます。
+      </p>
+    </div>
+    <div class="limitation-box">
+      <h3>各分野が直面している遺族支援の課題</h3>
+      <ul class="limitation-list">
+        <li>自治体：自死遺族以外の死別支援の窓口・体制が未整備な地域が多い</li>
+        <li>医療：治療や処置が優先され、継続的な悲嘆ケアに手が回りにくい</li>
+        <li>福祉・介護：支援の範囲外となるケースが多く、安定的なグリーフサポートが難しい</li>
+        <li>教育：子どもの死別体験へのケアを担える人材が不足している</li>
+        <li>地域全体：「任せられる公的な受け皿」となる非営利団体が多くない</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ACTIVITIES ===== -->
+<section class="features" id="activities">
+  <div class="section-inner">
+    <span class="section-tag">活動内容</span>
+    <div class="divider divider-green"></div>
+    <h2>With Heartが<span class="underline-green">取り組んでいること</span></h2>
+    <p class="lead">私たちは、心理臨床の知見を活かし、オンラインを基盤とする遺族支援をご提供しています。</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🤝</div>
+        <h3>わかちあいの会（オンライン）</h3>
+        <p>同じ体験をした方々が安心して語り合えるオンラインの場を提供。遠隔地や支援不在地域にも継続的に届けます。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏛️</div>
+        <h3>自治体・機関との連携</h3>
+        <p>支援体制が整っていない地域の自治体・医療・教育機関と協働。委託事業の受託や相談体制の整備を支援します。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📚</div>
+        <h3>支援者育成・研修</h3>
+        <p>グリーフサポートの専門性を高める研修を実施。厚労省指定法人への研修担当実績など、豊富なノウハウを持ちます。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💚</div>
+        <h3>支援者のケア</h3>
+        <p>他者の心の痛みに触れ続ける支援者自身の心理的負担を軽減するスーパービジョン・振り返り・心理的サポートを提供します。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌐</div>
+        <h3>オンライン相談支援</h3>
+        <p>地理的制約なく、相談につながれず孤立している方へ継続的な支援を届けます。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📢</div>
+        <h3>社会啓発活動</h3>
+        <p>グリーフの知識を広く社会に共有するための講演・啓発活動を行い、グリーフハラスメントの防止にも取り組みます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MEMBERS ===== -->
+<section class="members" id="members">
+  <div class="section-inner">
+    <span class="section-tag">理事・役員</span>
+    <div class="divider divider-green"></div>
+    <h2>遺族支援に<span class="underline-green">深く携わってきたメンバー</span></h2>
+    <div class="members-intro">
+      <p>
+        With Heartは、深く遺族支援に携わってきた公認心理師・社会福祉士・精神保健福祉士などの国家資格者を中心とした理事会のもと活動しています。活動メンバーは2年以上の遺族支援研修・支援実績を持つメンバーが中心となり、サポートグループ（専門職主導の支援グループ）とセルフヘルプグループ（当事者同士の自助グループ）の両要素を大切にしながら関わります。
+      </p>
+    </div>
+    <div class="members-grid">
+      <div class="member-card featured">
+        <span class="member-role">理事長</span>
+        <h3>井手 敏郎</h3>
+        <p class="credentials">
+          公認心理師<br>
+          一般社団法人 日本グリーフ専門士協会 代表理事<br>
+          東京都「とうきょう自死遺族総合支援窓口」スーパーバイザー
+        </p>
+      </div>
+      <div class="member-card">
+        <span class="member-role vice">副理事長</span>
+        <h3>幕澤 孝志</h3>
+        <p class="credentials">
+          社会福祉士 / 公認心理師<br>
+          主任ケアマネジャー<br>
+          遺族支援歴9年
+        </p>
+      </div>
+      <div class="member-card">
+        <span class="member-role director">理事</span>
+        <h3>山内 陽卯</h3>
+        <p class="credentials">
+          保育士<br>
+          筑波大学大学院 カウンセリング学位プログラム<br>
+          博士前期課程<br>
+          遺族支援歴7年
+        </p>
+      </div>
+      <div class="member-card">
+        <span class="member-role director">理事</span>
+        <h3>川上 寿美</h3>
+        <p class="credentials">精神保健福祉士<br>遺族支援歴4年</p>
+      </div>
+      <div class="member-card">
+        <span class="member-role director">理事</span>
+        <h3>高橋 堯則</h3>
+        <p class="credentials">臨床心理士<br>遺族支援歴3年</p>
+      </div>
+      <div class="member-card">
+        <span class="member-role director">理事</span>
+        <h3>牧野 静子</h3>
+        <p class="credentials">保育士<br>遺族支援歴3年</p>
+      </div>
+      <div class="member-card">
+        <span class="member-role auditor">監事</span>
+        <h3>平野 克典</h3>
+        <p class="credentials">司法書士</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SUPPORT TYPES ===== -->
+<section class="support-types" id="support">
+  <div class="section-inner">
+    <span class="section-tag">支援・会員制度</span>
+    <div class="divider divider-green"></div>
+    <h2>With Heartを<span class="underline-green">支えてください</span></h2>
+    <p class="lead">
+      遺族支援の灯を全国に広げるために、ともに活動してくださる方・応援してくださる方を募集しています。
+    </p>
+    <div class="types-grid">
+      <div class="type-card green">
+        <span class="type-badge badge-green">正会員</span>
+        <div class="type-number c-green">①</div>
+        <h3>正会員</h3>
+        <div class="type-fee">10,000<span>円 / 年</span></div>
+        <p class="type-desc">法人の運営メンバーとして総会議決権を持ちます。With Heartの理念と活動に深く賛同し、法人運営を担うメンバーです。<br><small>※理事会の承認が必要です。</small></p>
+      </div>
+      <div class="type-card pink">
+        <span class="type-badge badge-pink">サポーター</span>
+        <div class="type-number c-pink">②</div>
+        <h3>With Heart<br>サポーター</h3>
+        <div class="type-fee">3,000<span>円 / 年</span></div>
+        <p class="type-desc">遺族・支援者・市民・共感者として活動を応援してくださる方。活動報告・ニュースレター・イベント案内をお届けします。</p>
+      </div>
+      <div class="type-card green2">
+        <span class="type-badge badge-gold">パートナー</span>
+        <div class="type-number c-green">③</div>
+        <h3>With Heart<br>パートナー</h3>
+        <div class="type-fee">50,000<span>円 / 年</span></div>
+        <p class="type-desc">個人・団体・企業として深く支えてくださる方。年次活動レポート・オンラインのパートナー交流会の提供・ご芳名をHP掲載。<br><small>※掲載を希望されない場合はお知らせください。</small></p>
+      </div>
+      <div class="type-card gray">
+        <span class="type-badge badge-pink">寄付</span>
+        <div class="type-number" style="color:#888">④</div>
+        <h3>追加応援<br>（寄付）</h3>
+        <div class="type-fee" style="color:#888">10,000<span>円 / 口〜</span></div>
+        <p class="type-desc">どなたでも参加可能な任意の応援寄付です。1口10,000円から受け付けています。合計50,000円以上の方はご芳名をHP掲載。<br><small>※掲載を希望されない場合はお知らせください。</small></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DONATION CTA ===== -->
+<section class="donation" id="donate">
+  <div class="section-inner text-center">
+    <span class="section-tag" style="color:rgba(255,255,255,0.8)">寄付のお願い</span>
+    <div class="divider divider-center" style="background:rgba(255,255,255,0.5); margin:16px auto 24px;"></div>
+    <h2>あなたの支えが、<br>この場所を守ります。</h2>
+    <p>
+      哀しみの中にある方が、ひとりにならないために。<br>
+      そして、この支援が途切れることのないように。
+    </p>
+    <div class="donation-uses">
+      <span class="use-tag">わかちあいの会の運営</span>
+      <span class="use-tag">支援者育成・研修</span>
+      <span class="use-tag">地域での立ち上げサポート</span>
+      <span class="use-tag">支援者のケア</span>
+      <span class="use-tag">地域への啓発と普及</span>
+    </div>
+    <a href="#support" class="btn-primary">支援・会員制度を見る</a>
+  </div>
+</section>
+
+<!-- ===== ESTABLISHMENT ===== -->
+<section class="establishment" id="establishment">
+  <div class="section-inner">
+    <span class="section-tag">設立趣旨・沿革</span>
+    <div class="divider divider-green"></div>
+    <h2>設立への<span class="underline-green">経緯と想い</span></h2>
+    <div class="est-content">
+      <p>
+        現代では、身近な存在・大切な存在を亡くした方が大きな悲嘆を抱えながらも、相談先や語れる場が見つからず孤立してしまう状況があります。特に多くの自治体では自死遺族支援以外の体制が整っておらず、死別全般の支援がない地域が依然として多く存在しています。
+      </p>
+      <p>
+        私たちは支援者育成や「わかちあいの会」の運営を続ける中で、「支援が全く存在しない地域」「必要性を認識していても任せられる公的な受け皿がない」という現実を何度も目にしてきました。こうした地域では相談につながれず孤立が深まり、大きな社会課題となっています。
+      </p>
+      <p>
+        NPO法人化により、自治体委託事業の受託、支援不足地域へのオンライン支援、支援者育成の体系化、公的機関との相談体制整備などが可能となり、遺族支援の社会的基盤を安定的に築くことができます。「With Heart」の名の通り、誠意をもって関わり、思いやりをめぐらせ、支援のない地域にも支援の灯を届けてまいります。
+      </p>
+    </div>
+    <div class="timeline" style="margin-top: 48px;">
+      <span class="section-tag" style="margin-bottom:8px; display:block;">沿革</span>
+      <div class="timeline-item">
+        <div class="timeline-date">平成27年 4月</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">理事長・井手敏郎が遺族支援の活動を開始</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">平成29年 6月</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">オンラインによる支援者の養成を開始</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">令和3年 9月</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">厚生労働大臣指定法人「いのち支える自殺対策推進センター」にて「わかちあいの会運営スタッフ研修」を担当</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">令和4年 9月</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">東京都三鷹市主催「おくやみ窓口担当者向けグリーフケア研修」にて行政との連携を模索</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">令和7年10月</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">特定非営利活動法人 遺族サポートネット With Heart 設立を有志で確認</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">令和7年11月</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">特定非営利活動法人 遺族サポートネット With Heart 設立総会開催</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section style="background: var(--light-green); padding: 80px 24px;" id="contact">
+  <div class="section-inner text-center">
+    <span class="section-tag">お問い合わせ</span>
+    <div class="divider divider-green divider-center"></div>
+    <h2>ご相談・ご連絡は<span class="underline-green">お気軽に</span></h2>
+    <p class="lead" style="margin-bottom: 40px;">
+      わかちあいの会への参加、自治体・機関からのご相談、会員・寄付に関するお問い合わせなど、<br>
+      どうぞお気軽にご連絡ください。
+    </p>
+    <div style="background: white; border-radius: 20px; padding: 48px; max-width: 600px; margin: 0 auto; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+      <p style="font-size:15px; line-height:1.9; color:#666;">
+        特定非営利活動法人<br>
+        <strong style="font-size:20px; color:var(--text);">遺族サポートネット With Heart</strong><br><br>
+        ※お問い合わせフォームは準備中です。<br>
+        メールにてお問い合わせください。
+      </p>
+      <div style="margin-top:24px;">
+        <a href="mailto:info@withheartjapan.org" class="btn-primary" style="display:inline-block;">メールでお問い合わせ</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <div class="logo">
+          <span class="logo-sub" style="color:rgba(255,255,255,0.6); font-size:11px;">特定非営利活動法人</span>
+          <span class="logo-main">遺族サポートネット</span>
+          <span class="logo-en">With Heart</span>
+        </div>
+        <p>
+          "思いやりをめぐらせる"<br>
+          哀しみの中にある方が、ひとりにならない社会を目指して。
+        </p>
+      </div>
+      <div class="footer-nav">
+        <h4>メニュー</h4>
+        <ul>
+          <li><a href="#about">私たちについて</a></li>
+          <li><a href="#issue">遺族支援の現状</a></li>
+          <li><a href="#activities">活動内容</a></li>
+          <li><a href="#members">理事・役員</a></li>
+          <li><a href="#support">支援・会員制度</a></li>
+          <li><a href="#establishment">設立趣旨・沿革</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 特定非営利活動法人 遺族サポートネット With Heart. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
